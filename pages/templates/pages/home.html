@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block main %}
+<div class="window">
+  <div class="window__header">
+    <div class="window__title">Terminal</div>
+  </div>
+  <div class="window__content">
+    <div class="line"><strong>&gt;&nbsp;Welcome to the terminal.</strong></div>
+    <div class="line">&gt;&nbsp;Type 'help' to see available commands.</div>
+    <div class="line">&gt;&nbsp;It's a terminal, nothing to see here, no hidden games or anything.</div>
+    <div class="line">&gt;&nbsp;<span class="input"></span><span class="cursor"></span></div>
+  </div>
+</div>
+{% endblock %}

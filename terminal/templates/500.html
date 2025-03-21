@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %}500{% endblock %}
+{% block description %}Something went wrong. It was probably your fault.{% endblock %}
+
+
+{% block main %}
+<div class="window">
+  <div class="window__header">
+    <div class="window__title">Terminal</div>
+  </div>
+  <div class="window__content">
+    <div class="line"><h1>500</h1></div>
+    <div class="line">&gt;&nbsp;Something went wrong. It was probably your fault.</div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ title }}{% endblock %} · Terminal</title>
+  <meta name="description" content="{% block description %}{{ description }}{% endblock %}">
+  <link rel="canonical" href="{{ canonical }}">
+
+  {% if BASE_URL %}
+  <base href="{{ BASE_URL }}">
+  {% endif %}
+
+  {% block extra_head %}{% endblock %}
+
+  <link href="{% static 'base.css' %}" rel="stylesheet">
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+  {% block main %}{% endblock %}
+
+  <script src="{% static 'base.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

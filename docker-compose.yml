@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  web:
+    container_name: terminal_web
+    build: .
+    env_file: .env
+    volumes:
+      - /srv/data/terminal/:/data/
+    ports:
+      - "${PORT}:${PORT}"
+    command: >
+      gunicorn terminal.asgi:application --preload --workers 2 --max-requests 256
+      --timeout 30 --bind :${PORT} --worker-class uvicorn.workers.UvicornWorker
+      --error-logfile - --access-logfile -
+    restart: unless-stopped
