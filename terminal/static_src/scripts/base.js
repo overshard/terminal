@@ -6,16 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Define function declarations
   const help = () => `Available commands: ${Object.keys(commands).join(", ")}`;
 
+  const date = () => new Date().toLocaleString();
+
   const tick = () => "Tock.";
 
-  const date = () => new Date().toLocaleString();
+  const ping = () => "Pong.";
 
   // Define available commands
   const commands = {
     help: help,
     tick: tick,
+    ping: ping,
     date: date,
   };
+
   // Function to scroll to the bottom of the terminal
   function scrollToBottom() {
     terminalElement.scrollTo({

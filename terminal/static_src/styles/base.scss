@@ -35,6 +35,18 @@ body {
     color: #00ff00;
     overflow-y: scroll;
     height: calc(100% - 35px);
+
+    &::-webkit-scrollbar {
+      width: 0.25rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #111111;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: white;
+    }
   }
 }
 
